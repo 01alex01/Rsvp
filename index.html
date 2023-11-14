@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP Form with Background Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="./img/jt33.jpg" alt="Image 1" style="width:100%;">
+        </div>
+
+        <div class="mySlides">
+            <img src="./img/jt444.jpg" alt="Image 2" style="width:100%;">
+        </div>
+        <div class="mySlides">
+            <img src="./img/jt555.jpg" alt="Image 2" style="width:100%;">
+        </div>
+
+        <!-- Add more slides as needed -->
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1; }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </div>
+
+    <div class="container">
+        <h2> <span class="span1">
+                Janine & Oluwatobis
+            </span>
+            <span class="span2">rsvp</span>
+        </h2>
+
+        <form action="https://formspree.io/f/moqoqpwe" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="guests">Number of People:</label>
+            <select id="guests" name="guests" required>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="comments">Comments (optional):</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
