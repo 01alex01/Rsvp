@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    overflow: hidden;
+    background-color: hsl(0, 0%, 96%);
+
 }
 
 .slideshow-container {
@@ -45,8 +45,10 @@ h2 {
 
 
 h2 .span1 {
-    font-size: 2rem;
+    font-size: 4rem;
     color: #fff;
+    font-family: 'Bonheur Royale', cursive;
+    font-family: 'Rouge Script', cursive;
     text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -54,6 +56,7 @@ h2 .span1 {
 }
 
 h2 .span2 {
+    font-family: cursive;
     font-size: 1rem;
     color: rgb(1, 8, 1);
     text-align: center;
